@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Matrícula</title>
+</head>
+<body>
+    <header>
+        <h1>Sistema de Gerenciamento Acadêmico</h1>
+        <nav>
+            <a href="index.html">Dashboard</a> |
+            <a href="alunos.html">Alunos</a> |
+            <a href="cursos.html">Cursos</a> |
+            <a href="matriculas.html">Matrículas</a> |
+            <a href="usuarios.html">Usuários</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Cadastro de Matrícula</h2>
+
+        <form action="#" method="post">
+            <p>
+                <label for="aluno">Aluno:</label><br>
+                <input type="text" id="aluno" name="aluno" required>
+            </p>
+
+            <p>
+                <label for="curso">Curso:</label><br>
+                <input type="text" id="curso" name="curso" required>
+            </p>
+
+            <p>
+                <label for="dataMatricula">Data da matrícula:</label><br>
+                <input type="date" id="dataMatricula" name="dataMatricula" required>
+            </p>
+
+            <p>
+                <label for="semestreIngresso">Semestre de ingresso:</label><br>
+                <input type="text" id="semestreIngresso" name="semestreIngresso" placeholder="Ex: 2026/1" required>
+            </p>
+
+            <p>
+                <label for="numeroMatricula">Número da matrícula:</label><br>
+                <input type="text" id="numeroMatricula" name="numeroMatricula" required>
+            </p>
+
+            <p>
+                <label for="status">Status:</label><br>
+                <select id="status" name="status" required>
+                    <option value="">Selecione</option>
+                    <option value="ativa">Ativa</option>
+                    <option value="trancada">Trancada</option>
+                    <option value="cancelada">Cancelada</option>
+                </select>
+            </p>
+
+            <p>
+                <button type="submit">Salvar</button>
+                <a href="matriculas.html">Cancelar</a>
+            </p>
+        </form>
+    </main>
+</body>
+</html>
