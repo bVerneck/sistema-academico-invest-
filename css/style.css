@@ -1,0 +1,229 @@
+/* =========================================================
+   SISTEMA DE GERENCIAMENTO ACADÊMICO
+   Folha de estilos externa - Aula 04 (Programação Web I)
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   1. CONFIGURAÇÃO GERAL
+   - Seletor universal (*)
+   - Herança de font-family e color a partir do body
+   --------------------------------------------------------- */
+* {
+    box-sizing: border-box; /* padding e border passam a contar dentro da largura definida */
+}
+
+body {
+    margin: 0; /* remove a margem padrão do navegador */
+    font-family: Arial, sans-serif; /* herdado por todos os elementos de texto da página */
+    color: #222222;                /* herdado por parágrafos, labels, etc. */
+    background-color: #f5f5f5;
+}
+
+h1, h2, h3 {
+    margin-top: 0;
+}
+
+/* ---------------------------------------------------------
+   2. CABEÇALHO (seletor por elemento)
+   --------------------------------------------------------- */
+header {
+    background-color: #003366;
+    color: white;
+    padding: 24px;
+}
+
+header h1 {
+    margin: 0 0 8px 0;
+    font-size: 1.6rem;
+}
+
+/* ---------------------------------------------------------
+   3. NAVEGAÇÃO
+   - nav a é um seletor descendente (link dentro de nav)
+   --------------------------------------------------------- */
+nav {
+    background-color: #eeeeee;
+    padding: 12px;
+}
+
+nav a {
+    color: #003366;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* ---------------------------------------------------------
+   4. CONTEÚDO PRINCIPAL
+   --------------------------------------------------------- */
+main {
+    padding: 24px;
+}
+
+/* ---------------------------------------------------------
+   5. CLASSE REUTILIZÁVEL .card
+   Usada no dashboard e como moldura das listagens
+   (Box Model: content + padding + border + margin)
+   --------------------------------------------------------- */
+.card {
+    background-color: white;
+    border: 1px solid #dddddd;
+    padding: 20px;
+    margin-bottom: 16px;
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #003366;
+}
+
+/* Indicadores do dashboard: cada .card fica com largura fixa
+   e as caixas ficam lado a lado por serem inline-block
+   (sem uso de flex/grid, conforme pedido na atividade) */
+.dashboard-indicadores .card {
+    display: inline-block;
+    width: 200px;
+    margin-right: 16px;
+    text-align: center;
+    vertical-align: top;
+}
+
+.dashboard-indicadores .card p {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 8px 0 0 0;
+}
+
+/* ---------------------------------------------------------
+   6. ID ESPECÍFICO #dashboard
+   Diferença entre elemento, classe e id:
+   - header  -> elemento
+   - .card   -> classe (reutilizável em vários lugares)
+   - #dashboard -> id (único, exclusivo da página inicial)
+   --------------------------------------------------------- */
+#dashboard h2 {
+    color: #003366;
+}
+
+/* ---------------------------------------------------------
+   7. ESPECIFICIDADE
+   article p (0,0,1,1)  x  .card p (0,0,1,1 mas classe > elemento)
+   A regra .card p tem maior especificidade e prevalece
+   sobre article p dentro de <article class="card">.
+   --------------------------------------------------------- */
+article p {
+    color: #444444;
+}
+
+.card p {
+    color: #222222;
+}
+
+/* ---------------------------------------------------------
+   8. LISTAGENS (tabelas dentro de .card)
+   --------------------------------------------------------- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th,
+table td {
+    padding: 10px;
+    border: 1px solid #dddddd;
+    text-align: left;
+}
+
+table thead th {
+    background-color: #f0f0f0;
+}
+
+/* ---------------------------------------------------------
+   9. AVISO (aside)
+   --------------------------------------------------------- */
+.aviso {
+    background-color: #fff8dc;
+    border: 1px solid #e5d59b;
+    padding: 20px;
+    margin-bottom: 24px;
+}
+
+/* ---------------------------------------------------------
+   10. FORMULÁRIOS
+   --------------------------------------------------------- */
+form {
+    background-color: white;
+    padding: 24px;
+    border: 1px solid #dddddd;
+}
+
+fieldset {
+    border: 1px solid #cccccc;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+legend {
+    font-weight: bold;
+    color: #003366;
+    padding: 0 8px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+/* Agrupamento de seletores para os campos de entrada */
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #cccccc;
+    font-family: inherit; /* reforça a herança da fonte definida no body */
+}
+
+textarea {
+    min-height: 100px;
+}
+
+/* ---------------------------------------------------------
+   11. BOTÕES E LINKS DE AÇÃO
+   --------------------------------------------------------- */
+button {
+    padding: 10px 16px;
+    border: 1px solid #003366;
+    background-color: #003366;
+    color: white;
+    margin-right: 8px;
+}
+
+.botao-secundario {
+    background-color: white;
+    color: #003366;
+}
+
+.link-acao {
+    display: inline-block;
+    background-color: #003366;
+    color: white;
+    padding: 10px 16px;
+    text-decoration: none;
+    margin-bottom: 16px;
+}
+
+/* ---------------------------------------------------------
+   12. RODAPÉ
+   --------------------------------------------------------- */
+footer {
+    background-color: #003366;
+    color: white;
+    padding: 16px;
+    text-align: center;
+}
