@@ -6,16 +6,21 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
+
+    <header class="cabecalho">
         <h1>Sistema de Gerenciamento Acadêmico</h1>
-        <nav>
-            <a href="index.html">Dashboard</a> |
-            <a href="alunos.html">Alunos</a> |
-            <a href="cursos.html">Cursos</a> |
-            <a href="matriculas.html">Matrículas</a> |
-            <a href="usuarios.html">Usuários</a>
-        </nav>
+        <span>Área Acadêmica</span>
     </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="alunos.html">Alunos</a></li>
+            <li><a href="cursos.html">Cursos</a></li>
+            <li><a href="matriculas.html">Matrículas</a></li>
+            <li><a href="usuarios.html">Usuários</a></li>
+        </ul>
+    </nav>
 
     <main>
         <h2>Cadastro de Matrícula</h2>
@@ -23,47 +28,51 @@
         <form action="#" method="post">
             <fieldset>
                 <legend>Dados da Matrícula</legend>
+
                 <p>
                     <label for="aluno">Aluno:</label><br>
-                    <input type="text" id="aluno" name="aluno" required>
+                    <select id="aluno" name="aluno" required>
+                        <option value="">Selecione</option>
+                        <option value="1">Ana Paula Ribeiro</option>
+                        <option value="2">Carlos Eduardo Lima</option>
+                        <option value="3">Mariana Souza</option>
+                    </select>
                 </p>
                 <p>
                     <label for="curso">Curso:</label><br>
-                    <input type="text" id="curso" name="curso" required>
+                    <select id="curso" name="curso" required>
+                        <option value="">Selecione</option>
+                        <option value="1">Ciência da Computação</option>
+                        <option value="2">Análise e Desenvolvimento de Sistemas</option>
+                        <option value="3">Sistemas de Informação</option>
+                    </select>
                 </p>
                 <p>
-                    <label for="dataMatricula">Data da matrícula:</label><br>
-                    <input type="date" id="dataMatricula" name="dataMatricula" required>
+                    <label for="data">Data da matrícula:</label><br>
+                    <input type="date" id="data" name="data" required>
                 </p>
                 <p>
-                    <label for="semestreIngresso">Semestre de ingresso:</label><br>
-                    <input type="text" id="semestreIngresso" name="semestreIngresso" placeholder="Ex: 2026/1" required>
-                </p>
-                <p>
-                    <label for="numeroMatricula">Número da matrícula:</label><br>
-                    <input type="text" id="numeroMatricula" name="numeroMatricula" required>
-                </p>
-                <p>
-                    <label for="status">Status:</label><br>
-                    <select id="status" name="status" required>
+                    <label for="situacao">Situação:</label><br>
+                    <select id="situacao" name="situacao" required>
                         <option value="">Selecione</option>
                         <option value="ativa">Ativa</option>
                         <option value="trancada">Trancada</option>
                         <option value="cancelada">Cancelada</option>
                     </select>
                 </p>
-
             </fieldset>
 
-            <p>
+            <div class="acoes">
+                <a class="link-acao" href="matriculas.html">Cancelar</a>
                 <button type="submit">Salvar</button>
                 <button type="reset" class="botao-secundario">Limpar</button>
-                <a href="matriculas.html">Cancelar</a>
-            </p>
+            </div>
         </form>
     </main>
+
     <footer>
         <p>&copy; 2026 Sistema de Gerenciamento Acadêmico - Univest</p>
     </footer>
+
 </body>
 </html>

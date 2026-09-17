@@ -1,229 +1,200 @@
-/* =========================================================
-   SISTEMA DE GERENCIAMENTO ACADÊMICO
-   Folha de estilos externa - Aula 04 (Programação Web I)
-   ========================================================= */
+/* Sistema de Gerenciamento Academico
+   Aula 05 - Flexbox (evolucao do CSS da Aula 04) */
 
-/* ---------------------------------------------------------
-   1. CONFIGURAÇÃO GERAL
-   - Seletor universal (*)
-   - Herança de font-family e color a partir do body
-   --------------------------------------------------------- */
 * {
-    box-sizing: border-box; /* padding e border passam a contar dentro da largura definida */
+    box-sizing: border-box;
 }
 
 body {
-    margin: 0; /* remove a margem padrão do navegador */
-    font-family: Arial, sans-serif; /* herdado por todos os elementos de texto da página */
-    color: #222222;                /* herdado por parágrafos, labels, etc. */
-    background-color: #f5f5f5;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #222222;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
 }
 
-h1, h2, h3 {
-    margin-top: 0;
+/* ===== Cabecalho (Etapa 5 e 6) ===== */
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    background-color: #1f3b57;
+    color: #ffffff;
+    padding: 16px 24px;
 }
 
-/* ---------------------------------------------------------
-   2. CABEÇALHO (seletor por elemento)
-   --------------------------------------------------------- */
-header {
-    background-color: #003366;
-    color: white;
-    padding: 24px;
+.cabecalho h1 {
+    font-size: 22px;
+    margin: 0;
 }
 
-header h1 {
-    margin: 0 0 8px 0;
-    font-size: 1.6rem;
+.cabecalho span {
+    font-size: 14px;
 }
 
-/* ---------------------------------------------------------
-   3. NAVEGAÇÃO
-   - nav a é um seletor descendente (link dentro de nav)
-   --------------------------------------------------------- */
+/* ===== Menu (Etapas 1 a 4) ===== */
 nav {
-    background-color: #eeeeee;
-    padding: 12px;
+    background-color: #2c5580;
+    padding: 12px 24px;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 nav a {
-    color: #003366;
+    color: #ffffff;
     text-decoration: none;
-    font-weight: bold;
+    font-size: 15px;
 }
 
 nav a:hover {
     text-decoration: underline;
 }
 
-/* ---------------------------------------------------------
-   4. CONTEÚDO PRINCIPAL
-   --------------------------------------------------------- */
+/* ===== Conteudo ===== */
 main {
     padding: 24px;
 }
 
-/* ---------------------------------------------------------
-   5. CLASSE REUTILIZÁVEL .card
-   Usada no dashboard e como moldura das listagens
-   (Box Model: content + padding + border + margin)
-   --------------------------------------------------------- */
-.card {
-    background-color: white;
-    border: 1px solid #dddddd;
-    padding: 20px;
-    margin-bottom: 16px;
-}
-
-.card h3 {
+h2 {
     margin-top: 0;
-    color: #003366;
+    font-size: 20px;
 }
 
-/* Indicadores do dashboard: cada .card fica com largura fixa
-   e as caixas ficam lado a lado por serem inline-block
-   (sem uso de flex/grid, conforme pedido na atividade) */
-.dashboard-indicadores .card {
-    display: inline-block;
-    width: 200px;
-    margin-right: 16px;
-    text-align: center;
-    vertical-align: top;
-}
-
-.dashboard-indicadores .card p {
-    font-size: 2rem;
-    font-weight: bold;
-    margin: 8px 0 0 0;
-}
-
-/* ---------------------------------------------------------
-   6. ID ESPECÍFICO #dashboard
-   Diferença entre elemento, classe e id:
-   - header  -> elemento
-   - .card   -> classe (reutilizável em vários lugares)
-   - #dashboard -> id (único, exclusivo da página inicial)
-   --------------------------------------------------------- */
-#dashboard h2 {
-    color: #003366;
-}
-
-/* ---------------------------------------------------------
-   7. ESPECIFICIDADE
-   article p (0,0,1,1)  x  .card p (0,0,1,1 mas classe > elemento)
-   A regra .card p tem maior especificidade e prevalece
-   sobre article p dentro de <article class="card">.
-   --------------------------------------------------------- */
-article p {
-    color: #444444;
-}
-
-.card p {
-    color: #222222;
-}
-
-/* ---------------------------------------------------------
-   8. LISTAGENS (tabelas dentro de .card)
-   --------------------------------------------------------- */
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-table th,
-table td {
-    padding: 10px;
-    border: 1px solid #dddddd;
-    text-align: left;
-}
-
-table thead th {
-    background-color: #f0f0f0;
-}
-
-/* ---------------------------------------------------------
-   9. AVISO (aside)
-   --------------------------------------------------------- */
 .aviso {
-    background-color: #fff8dc;
-    border: 1px solid #e5d59b;
-    padding: 20px;
+    background-color: #fff6d6;
+    border-left: 4px solid #e0b000;
+    padding: 12px 16px;
     margin-bottom: 24px;
 }
 
-/* ---------------------------------------------------------
-   10. FORMULÁRIOS
-   --------------------------------------------------------- */
+.aviso p {
+    margin: 0;
+}
+
+/* ===== Cards do dashboard (Etapas 7, 8 e 9) ===== */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+/* ===== Listagens em cards (Etapas 13 e 14) ===== */
+.lista-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+/* Mesma classe .card para aluno, curso, matricula e usuario (Etapa 15) */
+.card {
+    flex: 1 1 250px;
+    background-color: #ffffff;
+    border: 1px solid #d5d5d5;
+    border-radius: 4px;
+    padding: 16px;
+}
+
+.card h3 {
+    margin: 0 0 8px 0;
+    font-size: 17px;
+    color: #1f3b57;
+}
+
+.card p {
+    margin: 4px 0;
+    font-size: 14px;
+}
+
+/* ===== Areas de acoes e grupos de botoes (Etapas 16, 17 e 18) ===== */
+.acoes {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+button {
+    background-color: #1f3b57;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 18px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2c5580;
+}
+
+.botao-secundario {
+    background-color: #777777;
+}
+
+.botao-secundario:hover {
+    background-color: #8d8d8d;
+}
+
+.link-acao {
+    color: #1f3b57;
+    font-size: 14px;
+}
+
+/* ===== Formularios ===== */
 form {
-    background-color: white;
-    padding: 24px;
-    border: 1px solid #dddddd;
+    background-color: #ffffff;
+    border: 1px solid #d5d5d5;
+    border-radius: 4px;
+    padding: 16px;
+    max-width: 640px;
 }
 
 fieldset {
-    border: 1px solid #cccccc;
-    margin-bottom: 20px;
-    padding: 20px;
+    border: 1px solid #d5d5d5;
+    border-radius: 4px;
+    padding: 16px;
 }
 
 legend {
     font-weight: bold;
-    color: #003366;
-    padding: 0 8px;
+    color: #1f3b57;
 }
 
 label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 6px;
+    font-size: 14px;
 }
 
-/* Agrupamento de seletores para os campos de entrada */
 input,
 select,
 textarea {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 16px;
-    border: 1px solid #cccccc;
-    font-family: inherit; /* reforça a herança da fonte definida no body */
+    padding: 8px;
+    border: 1px solid #c4c4c4;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-textarea {
-    min-height: 100px;
-}
-
-/* ---------------------------------------------------------
-   11. BOTÕES E LINKS DE AÇÃO
-   --------------------------------------------------------- */
-button {
-    padding: 10px 16px;
-    border: 1px solid #003366;
-    background-color: #003366;
-    color: white;
-    margin-right: 8px;
-}
-
-.botao-secundario {
-    background-color: white;
-    color: #003366;
-}
-
-.link-acao {
-    display: inline-block;
-    background-color: #003366;
-    color: white;
-    padding: 10px 16px;
-    text-decoration: none;
-    margin-bottom: 16px;
-}
-
-/* ---------------------------------------------------------
-   12. RODAPÉ
-   --------------------------------------------------------- */
+/* ===== Rodape ===== */
 footer {
-    background-color: #003366;
-    color: white;
-    padding: 16px;
+    background-color: #1f3b57;
+    color: #ffffff;
     text-align: center;
+    padding: 12px;
+    font-size: 13px;
+}
+
+footer p {
+    margin: 0;
 }

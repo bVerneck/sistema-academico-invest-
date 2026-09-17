@@ -6,41 +6,54 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
+
+    <header class="cabecalho">
         <h1>Sistema de Gerenciamento Acadêmico</h1>
-        <nav>
-            <a href="index.html">Dashboard</a> |
-            <a href="alunos.html">Alunos</a> |
-            <a href="cursos.html">Cursos</a> |
-            <a href="matriculas.html">Matrículas</a> |
-            <a href="usuarios.html">Usuários</a>
-        </nav>
+        <span>Área Acadêmica</span>
     </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="alunos.html">Alunos</a></li>
+            <li><a href="cursos.html">Cursos</a></li>
+            <li><a href="matriculas.html">Matrículas</a></li>
+            <li><a href="usuarios.html">Usuários</a></li>
+        </ul>
+    </nav>
 
     <main>
         <h2>Cursos</h2>
-        <p><a class="link-acao" href="curso-form.html">Novo Curso</a></p>
 
-        <div class="card">
-        <table border="1">
-            <thead>
-                <tr>
-                    <th>Código</th>
-                    <th>Nome</th>
-                    <th>Modalidade</th>
-                    <th>Status</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td colspan="4">Nenhum curso cadastrado.</td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="acoes">
+            <a class="link-acao" href="curso-form.html">Novo Curso</a>
+        </div>
+
+        <div class="lista-cards">
+            <article class="card">
+                <h3>Ciência da Computação</h3>
+                <p>Turno: Noturno</p>
+                <p>Duração: 8 semestres</p>
+                <p>Status: Ativo</p>
+            </article>
+            <article class="card">
+                <h3>Análise e Desenvolvimento de Sistemas</h3>
+                <p>Turno: Noturno</p>
+                <p>Duração: 5 semestres</p>
+                <p>Status: Ativo</p>
+            </article>
+            <article class="card">
+                <h3>Sistemas de Informação</h3>
+                <p>Turno: Matutino</p>
+                <p>Duração: 8 semestres</p>
+                <p>Status: Inativo</p>
+            </article>
         </div>
     </main>
+
     <footer>
         <p>&copy; 2026 Sistema de Gerenciamento Acadêmico - Univest</p>
     </footer>
+
 </body>
 </html>

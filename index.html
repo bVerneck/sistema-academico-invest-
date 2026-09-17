@@ -6,51 +6,55 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
+
+    <header class="cabecalho">
         <h1>Sistema de Gerenciamento Acadêmico</h1>
-        <nav>
-            <a href="index.html">Dashboard</a> |
-            <a href="alunos.html">Alunos</a> |
-            <a href="cursos.html">Cursos</a> |
-            <a href="matriculas.html">Matrículas</a> |
-            <a href="usuarios.html">Usuários</a>
-        </nav>
+        <span>Área Acadêmica</span>
     </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="alunos.html">Alunos</a></li>
+            <li><a href="cursos.html">Cursos</a></li>
+            <li><a href="matriculas.html">Matrículas</a></li>
+            <li><a href="usuarios.html">Usuários</a></li>
+        </ul>
+    </nav>
 
     <main>
         <aside class="aviso">
-            <p>Este sistema está em desenvolvimento (Aula 04 - camada visual com CSS).</p>
+            <p>Este sistema está em desenvolvimento (Aula 05 - layout com Flexbox).</p>
         </aside>
 
         <section id="dashboard">
             <h2>Dashboard</h2>
             <p>Bem-vindo ao Sistema de Gerenciamento Acadêmico.</p>
 
-            <div class="dashboard-indicadores">
+            <div class="cards">
                 <article class="card">
                     <h3>Alunos</h3>
-                    <p>0</p>
+                    <p>3 cadastrados</p>
                 </article>
-
                 <article class="card">
                     <h3>Cursos</h3>
-                    <p>0</p>
+                    <p>3 cadastrados</p>
                 </article>
-
                 <article class="card">
                     <h3>Matrículas</h3>
-                    <p>0</p>
+                    <p>3 registradas</p>
                 </article>
-
                 <article class="card">
                     <h3>Usuários</h3>
-                    <p>0</p>
+                    <p>3 ativos</p>
                 </article>
             </div>
         </section>
     </main>
+
     <footer>
         <p>&copy; 2026 Sistema de Gerenciamento Acadêmico - Univest</p>
     </footer>
+
 </body>
 </html>

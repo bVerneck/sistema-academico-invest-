@@ -6,41 +6,54 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
+
+    <header class="cabecalho">
         <h1>Sistema de Gerenciamento Acadêmico</h1>
-        <nav>
-            <a href="index.html">Dashboard</a> |
-            <a href="alunos.html">Alunos</a> |
-            <a href="cursos.html">Cursos</a> |
-            <a href="matriculas.html">Matrículas</a> |
-            <a href="usuarios.html">Usuários</a>
-        </nav>
+        <span>Área Acadêmica</span>
     </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="alunos.html">Alunos</a></li>
+            <li><a href="cursos.html">Cursos</a></li>
+            <li><a href="matriculas.html">Matrículas</a></li>
+            <li><a href="usuarios.html">Usuários</a></li>
+        </ul>
+    </nav>
 
     <main>
         <h2>Matrículas</h2>
-        <p><a class="link-acao" href="matricula-form.html">Nova Matrícula</a></p>
 
-        <div class="card">
-        <table border="1">
-            <thead>
-                <tr>
-                    <th>Número</th>
-                    <th>Aluno</th>
-                    <th>Curso</th>
-                    <th>Status</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td colspan="4">Nenhuma matrícula cadastrada.</td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="acoes">
+            <a class="link-acao" href="matricula-form.html">Nova Matrícula</a>
+        </div>
+
+        <div class="lista-cards">
+            <article class="card">
+                <h3>Matrícula 2026001</h3>
+                <p>Aluno: Ana Paula Ribeiro</p>
+                <p>Curso: Ciência da Computação</p>
+                <p>Situação: Ativa</p>
+            </article>
+            <article class="card">
+                <h3>Matrícula 2026002</h3>
+                <p>Aluno: Carlos Eduardo Lima</p>
+                <p>Curso: Análise e Desenvolvimento de Sistemas</p>
+                <p>Situação: Ativa</p>
+            </article>
+            <article class="card">
+                <h3>Matrícula 2026003</h3>
+                <p>Aluno: Mariana Souza</p>
+                <p>Curso: Sistemas de Informação</p>
+                <p>Situação: Trancada</p>
+            </article>
         </div>
     </main>
+
     <footer>
         <p>&copy; 2026 Sistema de Gerenciamento Acadêmico - Univest</p>
     </footer>
+
 </body>
 </html>

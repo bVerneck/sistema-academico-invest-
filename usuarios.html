@@ -6,41 +6,54 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
+
+    <header class="cabecalho">
         <h1>Sistema de Gerenciamento Acadêmico</h1>
-        <nav>
-            <a href="index.html">Dashboard</a> |
-            <a href="alunos.html">Alunos</a> |
-            <a href="cursos.html">Cursos</a> |
-            <a href="matriculas.html">Matrículas</a> |
-            <a href="usuarios.html">Usuários</a>
-        </nav>
+        <span>Área Acadêmica</span>
     </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="alunos.html">Alunos</a></li>
+            <li><a href="cursos.html">Cursos</a></li>
+            <li><a href="matriculas.html">Matrículas</a></li>
+            <li><a href="usuarios.html">Usuários</a></li>
+        </ul>
+    </nav>
 
     <main>
         <h2>Usuários</h2>
-        <p><a class="link-acao" href="usuario-form.html">Novo Usuário</a></p>
 
-        <div class="card">
-        <table border="1">
-            <thead>
-                <tr>
-                    <th>Nome</th>
-                    <th>Login</th>
-                    <th>Perfil</th>
-                    <th>Status</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td colspan="4">Nenhum usuário cadastrado.</td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="acoes">
+            <a class="link-acao" href="usuario-form.html">Novo Usuário</a>
+        </div>
+
+        <div class="lista-cards">
+            <article class="card">
+                <h3>Josemar Cristiano</h3>
+                <p>E-mail: josemar@institutoinvest.edu.br</p>
+                <p>Perfil: Administrador</p>
+                <p>Status: Ativo</p>
+            </article>
+            <article class="card">
+                <h3>Patrícia Gomes</h3>
+                <p>E-mail: patricia.gomes@institutoinvest.edu.br</p>
+                <p>Perfil: Secretaria</p>
+                <p>Status: Ativo</p>
+            </article>
+            <article class="card">
+                <h3>Rafael Antunes</h3>
+                <p>E-mail: rafael.antunes@institutoinvest.edu.br</p>
+                <p>Perfil: Professor</p>
+                <p>Status: Inativo</p>
+            </article>
         </div>
     </main>
+
     <footer>
         <p>&copy; 2026 Sistema de Gerenciamento Acadêmico - Univest</p>
     </footer>
+
 </body>
 </html>

@@ -6,41 +6,54 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
+
+    <header class="cabecalho">
         <h1>Sistema de Gerenciamento Acadêmico</h1>
-        <nav>
-            <a href="index.html">Dashboard</a> |
-            <a href="alunos.html">Alunos</a> |
-            <a href="cursos.html">Cursos</a> |
-            <a href="matriculas.html">Matrículas</a> |
-            <a href="usuarios.html">Usuários</a>
-        </nav>
+        <span>Área Acadêmica</span>
     </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="alunos.html">Alunos</a></li>
+            <li><a href="cursos.html">Cursos</a></li>
+            <li><a href="matriculas.html">Matrículas</a></li>
+            <li><a href="usuarios.html">Usuários</a></li>
+        </ul>
+    </nav>
 
     <main>
         <h2>Alunos</h2>
-        <p><a class="link-acao" href="aluno-form.html">Novo Aluno</a></p>
 
-        <div class="card">
-        <table border="1">
-            <thead>
-                <tr>
-                    <th>Nome</th>
-                    <th>CPF</th>
-                    <th>E-mail</th>
-                    <th>Status</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td colspan="4">Nenhum aluno cadastrado.</td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="acoes">
+            <a class="link-acao" href="aluno-form.html">Novo Aluno</a>
+        </div>
+
+        <div class="lista-cards">
+            <article class="card">
+                <h3>Ana Paula Ribeiro</h3>
+                <p>CPF: 012.345.678-90</p>
+                <p>E-mail: ana.ribeiro@email.com</p>
+                <p>Status: Ativo</p>
+            </article>
+            <article class="card">
+                <h3>Carlos Eduardo Lima</h3>
+                <p>CPF: 123.456.789-01</p>
+                <p>E-mail: carlos.lima@email.com</p>
+                <p>Status: Ativo</p>
+            </article>
+            <article class="card">
+                <h3>Mariana Souza</h3>
+                <p>CPF: 234.567.890-12</p>
+                <p>E-mail: mariana.souza@email.com</p>
+                <p>Status: Inativo</p>
+            </article>
         </div>
     </main>
+
     <footer>
         <p>&copy; 2026 Sistema de Gerenciamento Acadêmico - Univest</p>
     </footer>
+
 </body>
 </html>
