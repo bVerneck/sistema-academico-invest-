@@ -2,17 +2,16 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Cursos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos | Sistema Acadêmico</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
     <header class="cabecalho">
         <h1>Sistema de Gerenciamento Acadêmico</h1>
         <span>Área Acadêmica</span>
     </header>
-
-    <nav>
+    <nav aria-label="Navegação principal">
         <ul>
             <li><a href="index.html">Dashboard</a></li>
             <li><a href="alunos.html">Alunos</a></li>
@@ -24,36 +23,16 @@
 
     <main>
         <h2>Cursos</h2>
-
         <div class="acoes">
             <a class="link-acao" href="curso-form.html">Novo Curso</a>
         </div>
-
-        <div class="lista-cards">
-            <article class="card">
-                <h3>Ciência da Computação</h3>
-                <p>Turno: Noturno</p>
-                <p>Duração: 8 semestres</p>
-                <p>Status: Ativo</p>
-            </article>
-            <article class="card">
-                <h3>Análise e Desenvolvimento de Sistemas</h3>
-                <p>Turno: Noturno</p>
-                <p>Duração: 5 semestres</p>
-                <p>Status: Ativo</p>
-            </article>
-            <article class="card">
-                <h3>Sistemas de Informação</h3>
-                <p>Turno: Matutino</p>
-                <p>Duração: 8 semestres</p>
-                <p>Status: Inativo</p>
-            </article>
-        </div>
+        <div id="lista-cursos" class="lista-cards" aria-live="polite"></div>
     </main>
-
     <footer>
         <p>&copy; 2026 Sistema de Gerenciamento Acadêmico - Univest</p>
     </footer>
-
+    <script src="js/dados.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>

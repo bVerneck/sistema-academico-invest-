@@ -2,17 +2,16 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Matrículas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrículas | Sistema Acadêmico</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
     <header class="cabecalho">
         <h1>Sistema de Gerenciamento Acadêmico</h1>
         <span>Área Acadêmica</span>
     </header>
-
-    <nav>
+    <nav aria-label="Navegação principal">
         <ul>
             <li><a href="index.html">Dashboard</a></li>
             <li><a href="alunos.html">Alunos</a></li>
@@ -24,36 +23,16 @@
 
     <main>
         <h2>Matrículas</h2>
-
         <div class="acoes">
             <a class="link-acao" href="matricula-form.html">Nova Matrícula</a>
         </div>
-
-        <div class="lista-cards">
-            <article class="card">
-                <h3>Matrícula 2026001</h3>
-                <p>Aluno: Ana Paula Ribeiro</p>
-                <p>Curso: Ciência da Computação</p>
-                <p>Situação: Ativa</p>
-            </article>
-            <article class="card">
-                <h3>Matrícula 2026002</h3>
-                <p>Aluno: Carlos Eduardo Lima</p>
-                <p>Curso: Análise e Desenvolvimento de Sistemas</p>
-                <p>Situação: Ativa</p>
-            </article>
-            <article class="card">
-                <h3>Matrícula 2026003</h3>
-                <p>Aluno: Mariana Souza</p>
-                <p>Curso: Sistemas de Informação</p>
-                <p>Situação: Trancada</p>
-            </article>
-        </div>
+        <div id="lista-matriculas" class="lista-cards" aria-live="polite"></div>
     </main>
-
     <footer>
         <p>&copy; 2026 Sistema de Gerenciamento Acadêmico - Univest</p>
     </footer>
-
+    <script src="js/dados.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>

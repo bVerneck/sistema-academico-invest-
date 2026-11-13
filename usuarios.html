@@ -2,17 +2,16 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Usuários</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuários | Sistema Acadêmico</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
     <header class="cabecalho">
         <h1>Sistema de Gerenciamento Acadêmico</h1>
         <span>Área Acadêmica</span>
     </header>
-
-    <nav>
+    <nav aria-label="Navegação principal">
         <ul>
             <li><a href="index.html">Dashboard</a></li>
             <li><a href="alunos.html">Alunos</a></li>
@@ -24,36 +23,19 @@
 
     <main>
         <h2>Usuários</h2>
-
         <div class="acoes">
             <a class="link-acao" href="usuario-form.html">Novo Usuário</a>
         </div>
-
-        <div class="lista-cards">
-            <article class="card">
-                <h3>Josemar Cristiano</h3>
-                <p>E-mail: josemar@institutoinvest.edu.br</p>
-                <p>Perfil: Administrador</p>
-                <p>Status: Ativo</p>
-            </article>
-            <article class="card">
-                <h3>Patrícia Gomes</h3>
-                <p>E-mail: patricia.gomes@institutoinvest.edu.br</p>
-                <p>Perfil: Secretaria</p>
-                <p>Status: Ativo</p>
-            </article>
-            <article class="card">
-                <h3>Rafael Antunes</h3>
-                <p>E-mail: rafael.antunes@institutoinvest.edu.br</p>
-                <p>Perfil: Professor</p>
-                <p>Status: Inativo</p>
-            </article>
+        <div class="aviso">
+            <p>Os registros de usuários desta atividade contêm somente identificador, nome, perfil e status. Senhas não são armazenadas.</p>
         </div>
+        <div id="lista-usuarios" class="lista-cards" aria-live="polite"></div>
     </main>
-
     <footer>
         <p>&copy; 2026 Sistema de Gerenciamento Acadêmico - Univest</p>
     </footer>
-
+    <script src="js/dados.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>

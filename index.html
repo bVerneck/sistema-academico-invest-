@@ -2,17 +2,16 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Sistema de Gerenciamento Acadêmico</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Sistema Acadêmico</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
     <header class="cabecalho">
         <h1>Sistema de Gerenciamento Acadêmico</h1>
         <span>Área Acadêmica</span>
     </header>
-
-    <nav>
+    <nav aria-label="Navegação principal">
         <ul>
             <li><a href="index.html">Dashboard</a></li>
             <li><a href="alunos.html">Alunos</a></li>
@@ -24,37 +23,40 @@
 
     <main>
         <aside class="aviso">
-            <p>Este sistema está em desenvolvimento (Aula 05 - layout com Flexbox).</p>
+            <p>Os registros deste sistema são armazenados no navegador e permanecem disponíveis após a atualização da página.</p>
         </aside>
-
         <section id="dashboard">
             <h2>Dashboard</h2>
             <p>Bem-vindo ao Sistema de Gerenciamento Acadêmico.</p>
-
             <div class="cards">
                 <article class="card">
                     <h3>Alunos</h3>
-                    <p>3 cadastrados</p>
+                    <p><strong id="total-alunos">0</strong> cadastrados</p>
                 </article>
                 <article class="card">
                     <h3>Cursos</h3>
-                    <p>3 cadastrados</p>
+                    <p><strong id="total-cursos">0</strong> cadastrados</p>
                 </article>
                 <article class="card">
                     <h3>Matrículas</h3>
-                    <p>3 registradas</p>
+                    <p><strong id="total-matriculas">0</strong> registradas</p>
                 </article>
                 <article class="card">
                     <h3>Usuários</h3>
-                    <p>3 ativos</p>
+                    <p><strong id="total-usuarios-ativos">0</strong> ativos</p>
                 </article>
             </div>
+            <div class="acoes acoes-inicio">
+                <button type="button" id="btn-restaurar-todos" class="botao-secundario">Restaurar todos os dados iniciais</button>
+            </div>
+            <p id="mensagem-dashboard" class="mensagem" aria-live="polite"></p>
         </section>
     </main>
-
     <footer>
         <p>&copy; 2026 Sistema de Gerenciamento Acadêmico - Univest</p>
     </footer>
-
+    <script src="js/dados.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>

@@ -2,17 +2,16 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Alunos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alunos | Sistema Acadêmico</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
     <header class="cabecalho">
         <h1>Sistema de Gerenciamento Acadêmico</h1>
         <span>Área Acadêmica</span>
     </header>
-
-    <nav>
+    <nav aria-label="Navegação principal">
         <ul>
             <li><a href="index.html">Dashboard</a></li>
             <li><a href="alunos.html">Alunos</a></li>
@@ -24,36 +23,32 @@
 
     <main>
         <h2>Alunos</h2>
-
         <div class="acoes">
             <a class="link-acao" href="aluno-form.html">Novo Aluno</a>
+            <button type="button" id="btn-restaurar-alunos" class="botao-secundario">Restaurar dados iniciais</button>
         </div>
-
-        <div class="lista-cards">
-            <article class="card">
-                <h3>Ana Paula Ribeiro</h3>
-                <p>CPF: 012.345.678-90</p>
-                <p>E-mail: ana.ribeiro@email.com</p>
-                <p>Status: Ativo</p>
-            </article>
-            <article class="card">
-                <h3>Carlos Eduardo Lima</h3>
-                <p>CPF: 123.456.789-01</p>
-                <p>E-mail: carlos.lima@email.com</p>
-                <p>Status: Ativo</p>
-            </article>
-            <article class="card">
-                <h3>Mariana Souza</h3>
-                <p>CPF: 234.567.890-12</p>
-                <p>E-mail: mariana.souza@email.com</p>
-                <p>Status: Inativo</p>
-            </article>
-        </div>
+        <section class="filtros" aria-label="Busca e filtros de alunos">
+            <div class="campo-filtro">
+                <label for="busca-alunos">Buscar por nome, CPF ou e-mail:</label>
+                <input type="search" id="busca-alunos" placeholder="Digite para pesquisar">
+            </div>
+            <div class="campo-filtro">
+                <label for="filtro-status-alunos">Filtrar por status:</label>
+                <select id="filtro-status-alunos">
+                    <option value="todos">Todos</option>
+                    <option value="ativo">Ativos</option>
+                    <option value="inativo">Inativos</option>
+                </select>
+            </div>
+        </section>
+        <p id="contador-alunos" class="texto-apoio" aria-live="polite"></p>
+        <div id="lista-alunos" class="lista-cards" aria-live="polite"></div>
     </main>
-
     <footer>
         <p>&copy; 2026 Sistema de Gerenciamento Acadêmico - Univest</p>
     </footer>
-
+    <script src="js/dados.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
